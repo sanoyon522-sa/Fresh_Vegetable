@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Landing page</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Custom tailwindcss start here -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-green: #179800;
+      --color-secondary-white: #EFEBE3;
+
+
+      --shadow-primary: 0 4px 25px -4px rgba(0, 0, 0, 0.1);
+      --shadow-secondary: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+      --breakpoint-xs: 375px;
+      --breakpoint-sm: 480px;
+      --breakpoint-md: 650px;
+      --breakpoint-lg: 768px;
+      --breakpoint-xl: 1024px;
+      --breakpoint-2xl: 1320px;
+
+      --container-max-width: 1320px;
+      --container-padding-x: 1rem;
+    }
+    .container{
+      max-width: var(--container-max-width);
+      padding-left: var(--container-padding-x);
+      padding-right: var(--container-padding-x);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+
+
+  </style>
+  <!-- Custom tailwindcss ended here -->
+</head>
+
+<body class="font-sora">
+  <!--Navber started here-->
+  <nav class=" hidden md:flex bg-secondary-white  w-auto h-auto">
+    <div class="container flex justify-between py-5 items-center ">
+      <img src="./assets/logo.png" alt="not found" class="w-[154.04px] h-[60.56px]">
+
+      <ul class="flex flex-row gap-x-8">
+        <li class="font-regular text-xl leading-[100%]">Product</li>
+        <li class="font-regular text-xl leading-[100%]">Services</li>
+        <li class="font-regular text-xl leading-[100%]">Contact us</li>
+      </ul>
+      <div class="flex flex-row gap-8 items-center">
+        <div>
+          <div class="flex flex-row gap-6 cursor-pointer">
+            <img src="./assets/search.png" alt="not found">
+            <img src="./assets/buy.png" alt="not found">
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-row gap-3">
+            <button
+              class="bg-primary-green px-[30px] py-[10px] rounded-[8px] border-[1px] border-transparent text-white text-xl font-regular leading-[100%] cursor-pointer transition duration-500 ease-in-out hover:bg-transparent hover:text-black hover:border-primary-green">Login</button>
+            <button
+              class="bg-primary-green px-[30px] py-[10px] rounded-[8px] border-[1px] border-transparent text-white text-xl font-regular leading-[100%] cursor-pointer transition duration-500 ease-in-out hover:bg-transparent hover:text-black hover:border-primary-green">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class=" bg-white md:hidden w-auto h-auto"> <!-- responsive nav -->
+    <div class="container flex justify-between itams-center border-y-[.5px] border-primary-green py-5">
+      <img src="./assets/1st logo.jpg" alt="not found">
+      <img src="./assets/bars-3.png" alt="not found" id="bar" class="cursor-pointer" onclick="">
+    </div>
+  </nav>
+  <!--mobile menu-->
+  <div class=" absolute z-10 right-0 hidden md:hidden" id="mobileMenu">
+    <div class="flex flex-col gap-5 p-10 bg-secondary-white rounded-bl-lg border-b border-l border-primary-green ">
+      <ul class="flex flex-col gap-y-5 text-xl font-semibold text-primary-green focus:shadow-lg " id="ul">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <button
+        class="bg-primary-green rounded-lg py-2 px-3 text-white text-xl font-semibold border border-transparent hover:text-primary-green hover:bg-transparent hover:border-primary-green cursor-pointer transition duration-500 ease-in-out">Login</button>
+      <button
+        class="bg-primary-green rounded-lg py-2 px-3 text-white text-xl font-semibold border border-transparent hover:text-primary-green hover:bg-transparent hover:border-primary-green cursor-pointer transition duration-500 ease-in-out">Register</button>
+    </div>
+  </div>
+  <!--Navber ended here-->
+
+  <!--hero section started here-->
+  <section
+    class="xs:bg-gradient-to-b xs:from-[#FFFFFF] xs:to-[#EFEBE3] md:bg-secondary-white flex flex-col items-center gap-y-10">
+    <div class="container flex flex-col gap-y-4">
+      <h1 class="w-auto h-auto font-semibold xs:text-[32px] md:text-[56px] pt-25 text-center leading-[110%]">Freshness
+        <span class="text-primary-green">You Can <br>Count</span>On,Prices <br class="md:hidden"> You'll Love!
+      </h1>
+      <p
+        class="w-auto h-auto xs:max-w-[349px] xs:text-base md:max-w-[750px] font-regular md:text-xl leading-[100%] text-center text-black md:mx-auto">
+        Shop your daily
+        essentials
+        at
+        unbeatable prices. From
+        fresh
+        produce
+        to pantry staples, we've got you
+        covered every day!</p>
+    </div>
+    <img src="./assets/vegitable.png" alt="not found"
+      class="xs:max-w-[493px] xs:max-h-[400px] md:max-w-[1031px] md:max-h-[838px] w-auto h-auto">
+  </section>
+  <!--hero section ended here-->
+
+  <!--services section started here-->
+  <section class="bg-white flex items-center">
+    <div class="container flex flex-col gap-y-12 xs:py-12 md:py-25">
+      <h4 class="font-semibold xs:text-2xl md:text-4xl leading-[100%] text-primary-green">Services</h4>
+      <div class=" flex  justify-between xs:grid xs:grid-cols-1 xs:gap-y-5 md:grid md:grid-cols-3 md:gap-x-5 ">
+        <div class="bg-secondary-white rounded-[16px] flex flex-col items-center gap-y-3 w-auto h-auto p-10">
+          <img src="./assets/24.png " alt="not found" class="w-[150px] h-[150px]">
+          <h5 class="font-semibold text-2xl leading-[100%]">24/7 Services</h5>
+          <p class="max-w-[320px] text-xl font-light leading-[110%] text-center">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt
+          </p>
+        </div>
+        <div class="bg-secondary-white rounded-[16px] flex flex-col items-center gap-y-3 w-auto h-auto p-10">
+          <img src="./assets/24.png " alt="not found" class="w-[150px] h-[150px]">
+          <h5 class="font-semibold text-2xl leading-[100%]">24/7 Services</h5>
+          <p class="max-w-[320px] text-xl font-light leading-[110%] text-center">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt
+          </p>
+        </div>
+        <div class="bg-secondary-white rounded-[16px] flex flex-col items-center gap-y-3 w-auto h-auto p-10">
+          <img src="./assets/24.png " alt="not found" class="w-[150px] h-[150px]">
+          <h5 class="font-semibold text-2xl leading-[100%]">24/7 Services</h5>
+          <p class="max-w-[320px] text-xl font-light leading-[110%] text-center">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--services section ended here-->
+
+  <!--products section started here-->
+  <section class="bg-secondary-white flex items-center">
+    <div class="container flex flex-col gap-y-12 xs:py-12 md:py-25">
+      <h4 class="font-semibold xs:text-2xl md:text-4xl leading-[100%] text-primary-green ">Popular Products
+      </h4>
+      <div class="flex xs:grid xs:grid-cols-1 xs:gap-8 md:flex md:flex-row md:gap-8 ">
+        <div
+          class="relative w-auto h-auto rounded-[10px] bg-gradient-to-br from-[#53DB3A] to-[#FFFFFF] xs:max-w-[357px] md:max-w-[424px] md:max-h-[402px] xs:mx-auto overflow-hidden">
+
+          <div class="flex flex-col gap-y-6 pt-[73px] pl-6 pr-[37px] pb-[45px]">
+            <h4 class="font-semibold text-[32px] text-white leading-[100%]">30% off</h4>
+            <p class="font-regular text-[#111111B2] text-base leading-[110%]">
+              Discover a world of treats, toys, and <br class="hidden md:flex">
+              essentials handpicked for
+            </p>
+            <div>
+              <button class="inline-block bg-white px-8 py-3 rounded-md border border-transparent 
+                text-black xs:text-base md:text-xl font-medium leading-none cursor-pointer 
+                transition-colors duration-500 ease-in-out 
+                hover:bg-transparent hover:text-white hover:border-black">
+                Buy Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Image নিচে কিন্তু overlap করবে -->
+          <div class="flex justify-end -mt-12 pr-3">
+            <img src="./assets/Group 9179.png" alt="" class="w-[150px] md:w-[180px]">
+          </div>
+
+        </div>
+
+        <div class=" h-auto w-auto xs:grid xs:grid-cols-2 xs:gap-[23px] md:grid md:grid-cols-3 md:gap-6 xs:mx-auto">
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/onion.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Onion 1 KG</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/tomato.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Tomato 500 g</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/potato.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Potato 1 KG</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/onion.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Onion 1 KG</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/tomato.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Tomato 500 g</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/potato.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Potato 1 KG</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/onion.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Onion 1 KG</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/tomato.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Tomato 500 g</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white xs:w-[171.88px] xs:h-[73.75px] xs:rounded-[6.25px] md:w-[275px] md:h-[118px] md:rounded-[10px]">
+            <div class="xs:py-[10px] xs:pl-[10px] md:pt-4 md:pl-4 flex flex-row xs:gap-[10px] md:gap-[16px]">
+              <div
+                class="bg-secondary-white xs:w-[53.75px] xs:h-[53.75px] xs:rounded-[6.25px] md:w-[86px] md:h-[86px] md:rounded-[10px]">
+                <img src="./assets/potato.png" alt="not found">
+              </div>
+              <div class="flex flex-col justify-between py-[2px]">
+                <div class="flex flex-row xs:gap-[6.88px] md:gap-[11px]">
+                  <img src="./assets/star.png" alt="" class="xs:w-[11.25px] xs:h-[11.25px] md:w-[18px] md:h-[18px]">
+                  <p class="text-[#111111] font-regular leading-[100%] xs:text-[10px] md:text-base">4.5</p>
+                </div>
+                <h5 class="font-medium leading-[100%] text-[#111111] xs:text-[12.5px] md:text-xl">Potato 1 KG</h5>
+                <p class="font-medium leading-[100%] text-[#111111] xs:text-[10px] md:text-base">$39.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--products section ended here-->
+
+  <!--offer section started here-->
+  <section class="bg-white ">
+    <div class="container xs:py-12 md:py-25 h-auto w-auto flex flex-col gap-10">
+      <h4 class="font-semibold xs:text-2xl md:text-4xl leading-[100%] text-primary-green ">Popular Products
+      </h4>
+      <div class=" container xs:flex xs:flex-col xs:gap-5 md:flex md:flex-row md:gap-5 ">
+        <div
+          class="w-auto h-auto bg-[#115414] flex flex-row md:gap-8 xs:max-w-[358.62px] xs:max-h-[190.84px]  md:max-w-[780px] md:max-h-[344px] xs:rounded-[12px] md:rounded-[24px] xs:mx-auto overflow-hidden">
+
+          <!-- Left content -->
+          <div class="xs:py-6 xs:pl-6 md:pl-7 pt-10 pb-10 flex flex-col justify-center xs:gap-3 md:gap-8">
+            <img src="./assets/Dawat-logo.png" alt="not found"
+              class="xs:w-[113.4px] xs:h-[42.41px] md:w-[246.64px] md:h-[76.44px]">
+            <div>
+              <p
+                class="bg-[#63B76D] inline-block font-regular leading-[100%] text-white tracking-[0.1em] xs:text-[12.91px] xs:py-[8.3px] xs:px-[18.44px] xs:rounded-[7.83px] md:text-2xl md:py-[12px] md:px-[30px] md:rounded-[13.29px] cursor-pointer">
+                Cook Exotic Dishes
+              </p>
+            </div>
+            <h4 class="font-roboto font-regular xs:text-xl md:text-[36px] leading-[49.86px] text-white">
+              UP to <span class="font-bold">20% OFF</span>
+            </h4>
+          </div>
+
+          <!-- Right image -->
+          <div class="flex flex-col justify-end">
+            <img src="./assets/dawat.png" alt="not found"
+              class="xs:w-[147.91px] xs:h-[172.4px] xs:pb-2  md:w-[340px] md:h-[300px] ">
+          </div>
+
+        </div>
+
+        <div
+          class="w-auto h-auto bg-[#102861] flex flex-row md:gap-8 xs:max-w-[358.62px] xs:max-h-[190.84px] xs:rounded-[12px] md:max-w-[520px] md:max-h-[344px] md:rounded-[24px] xs:mx-auto overflow-hidden">
+
+          <!-- Left content -->
+          <div class="xs:p-6 md:pl-5  flex flex-col justify-center xs:gap-2 md:gap-3">
+            <img src="./assets/rice-logo.png" alt="not found"
+              class="w-[64.53px] h-[70.99px] md:w-[98.92px] md:h-[127px]">
+
+            <div>
+              <p
+                class="bg-[#2A4D97] inline-block font-regular leading-[100%] text-white tracking-[0.1em] xs:text-[12.91px] xs:py-[8.3px] xs:px-[18.44px] xs:rounded-[7.83px] md:text-2xl md:py-[15px] md:px-[28px] md:rounded-[13.29px] cursor-pointer">
+                World’s No.1 Rice
+              </p>
+            </div>
+
+            <h4 class="font-roboto font-regular xs:text-xl md:text-[34px] leading-[49.86px] text-white">
+              UP to <span class="font-bold">20% OFF</span>
+            </h4>
+          </div>
+
+          <!-- Right image -->
+          <div class="flex flex-col justify-end xs:px-2">
+            <img src="./assets/rice.png" alt="not found"
+              class="xs:w-[120.77px] xs:h-[169.49px]  md:h-[287px] md:w-[175px] md:pb-1 md:pr-2">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--offer section ended here-->
+
+  <section class="bg-white">
+    <!-- Newsletter Section -->
+    <section class="relative xs:mx-5 xs:mb-[-250px] md:mb-[-150px] z-10">
+      <div class="container  bg-secondary-white rounded-xl   ">
+        <div class="flex flex-col md:flex-row items-center  md:p-10 text-center p-6 justify-center gap-6">
+          <!-- Image -->
+          <img src="./assets/92 2.png" alt="Basket" class="w-36 mx-auto xs:w-[232px] md:w-[442px] md:mx-0">
+
+          <!-- Text Section -->
+          <div class="flex flex-col gap-4 items-center md:items-start">
+            <h2
+              class="text-[22px] md:text-[36px] font-semibold text-primary-green md:text-[#111111] leading-[100%] mb-2">
+              Get Grocery
+              News!
+            </h2>
+            <p class="text-[#11111] mb-4 text-base md:text-xl">
+              Exclusive training tips, tricks, product deals and more.
+            </p>
+            <div class="flex flex-col gap-3   xs:justify-center md:items-start">
+              <input type="email" placeholder="Enter email..."
+                class="bg-[#FFFFFF] px-4 py-2 rounded-md sm:rounded-l-md sm:rounded-t-none border border-transparent focus:outline-primary-green w-[300px] h-[42px]">
+              <div class="">
+                <button
+                  class="bg-primary-green text-white text-[14px] md:text-xl px-[30px] py-[10px] rounded-[6px] md:rounded-[8px] border border-transparenr hover:bg-transparent hover:text-primary-green hover:border-primary-green transition duration-500 ease-in-out cursor-pointer inline-block">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-primary-green text-white  mt-12 px-8 py-10 pb-12 z-0 ">
+      <div class="container xs:pt-50 md:pt-30 flex flex-col items-start md:flex-row md:justify-between md:items-start">
+        <div class="max-w-sm mb-8 md:mb-0  md:text-left">
+          <img src="./assets/2nd logo.png" alt="not found" class="md:w-[154px] md:mb-2">
+          <p class="text-base md:text-xl leading-relaxed">
+            Discover a world of treats, toys, and essentials handpicked for your furry friends.
+          </p>
+        </div>
+
+        <div class="mb-8 md:mb-0  md:text-left ">
+          <ul class="space-y-2 text-base md:text-xl">
+            <li><a href="#" class="hover:underline">Product</a></li>
+            <li><a href="#" class="hover:underline">Services</a></li>
+            <li><a href="#" class="hover:underline">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class=" md:text-right ">
+          <p class="text-base md:text-xl mb-5 md:mb-15 md:mt-10">Follow Us</p>
+          <div class="flex  md:justify-end space-x-4 text-xl">
+            <a href="#" class="hover:text-gray-200"><img src="./assets/facebook.png" alt="not found"></a>
+            <a href="#" class="hover:text-gray-200"><img src="./assets/instagram.png" alt="not found"></a>
+            <a href="#" class="hover:text-gray-200"><img src="./assets/linkedin.png" alt="not found"></a>
+            <a href="#" class="hover:text-gray-200"><img src="./assets/youtube.png" alt="not found"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
